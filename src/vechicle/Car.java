@@ -21,7 +21,7 @@ public class Car {
         this.color = color;
         this.value = value;
         this.mileage = mileage;
-        this.partList = PartGenerator.GeneratePartSet(this);
+        this.partList = PartGenerator.generatePartSet(this);
     }
 
     @Override

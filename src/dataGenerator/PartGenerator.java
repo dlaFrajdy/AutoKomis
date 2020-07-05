@@ -31,22 +31,22 @@ public class PartGenerator {
 
     private final static int percentageChanceForBrokenPart = 30;
 
-    public static ArrayList<Part> GeneratePartSet(Car car) {
+    public static ArrayList<Part> generatePartSet(Car car) {
 
         return new ArrayList<>() {{
-            add(GenerateSinglePart(car, PartNames.brakes));
-            add(GenerateSinglePart(car, PartNames.suspension));
-            add(GenerateSinglePart(car, PartNames.engine));
-            add(GenerateSinglePart(car, PartNames.carBody));
-            add(GenerateSinglePart(car, PartNames.gearbox));
+            add(generateSinglePart(car, PartNames.brakes));
+            add(generateSinglePart(car, PartNames.suspension));
+            add(generateSinglePart(car, PartNames.engine));
+            add(generateSinglePart(car, PartNames.carBody));
+            add(generateSinglePart(car, PartNames.gearbox));
         }};
     }
 
-    private static Part GenerateSinglePart(Car car, PartNames part) {
-        return new Part(part.name(), GetMaterialCost(car, part), part.getValue(), drawDamage());
+    private static Part generateSinglePart(Car car, PartNames part) {
+        return new Part(part.name(), getMaterialCost(car, part), part.getValue(), randomDamage());
     }
 
-    private static double GetMaterialCost(Car car, PartNames part) {
+    private static double getMaterialCost(Car car, PartNames part) {
         switch (part) {
             case brakes:
                 if (PartsResources.brakesPriceList.containsKey(car.producer))
@@ -74,9 +74,8 @@ public class PartGenerator {
 
     }
 
-    private static boolean drawDamage() {
-        int rnd = ThreadLocalRandom.current().nextInt(10);
-        return rnd < percentageChanceForBrokenPart / 10;
+    private static boolean randomDamage() {
+        return ThreadLocalRandom.current().nextInt(10) < percentageChanceForBrokenPart / 10;
     }
 
 }

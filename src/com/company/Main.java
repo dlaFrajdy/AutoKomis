@@ -2,30 +2,46 @@ package com.company;
 
 import dataGenerator.CarGenerator;
 import dataGenerator.ClientGenerator;
-import human.Player;
+import human.Client;
 import initialGameResources.CarResources;
-import initialGameResources.ClientDataResources;
 import vechicle.Car;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        ArrayList<Client> list = new ArrayList<>() {{
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+            add(new ClientGenerator().generateClient());
+        }};
 
-        Car car = CarGenerator.GetDrawnCar();
-        Car car2 = CarGenerator.GetDrawnCar();
-        Car car3 = CarGenerator.GetDrawnCar();
-        Car car4 = CarGenerator.GetDrawnCar();
 
-        System.out.println(car);
-        System.out.println(car2);
-        System.out.println(car3);
-        System.out.println(car4);
+        for (Client client : list
+        ) {
+            System.out.println(client);
+        }
 
 
     }

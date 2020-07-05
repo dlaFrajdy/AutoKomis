@@ -4,11 +4,10 @@ import vechicle.Car;
 import vechicle.PassengerCar;
 import vechicle.TruckCar;
 
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.*;
 
 public class CarResources {
-    public static ArrayList<Car> carDatabase = new ArrayList<>() {{
+    public static List<Car> carDatabase = new ArrayList<>() {{
         add(new PassengerCar("Volkswagen", "Golf", "Silver", 8000.0, 320000, PassengerCar.carClassifications.standard));
         add(new PassengerCar("Volkswagen", "Golf GTI", "Black", 190000.0, 30000, PassengerCar.carClassifications.standard));
         add(new PassengerCar("Alfa Romeo", "Giulietta ", "Silver", 29900.0, 1920000, PassengerCar.carClassifications.standard));
@@ -127,14 +126,15 @@ public class CarResources {
         add(new TruckCar("Fiat", "Ducato", "White", 28900.0, 195000, 1200));
 
     }};
-    public static HashSet<String> allCarProducers = GetUniqueCarProducers();
+    public static List<String> allCarProducers = getUniqueCarProducers();
 
 
-    private static HashSet<String> GetUniqueCarProducers() {
+    private static List<String> getUniqueCarProducers() {
+
         HashSet<String> temp = new HashSet<>();
         for (Car car : carDatabase) {
             temp.add(car.producer);
         }
-        return temp;
+        return new ArrayList<>(new HashSet<>(temp));
     }
 }
