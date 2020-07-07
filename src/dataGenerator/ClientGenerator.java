@@ -4,6 +4,7 @@ import human.Client;
 import initialGameResources.CarResources;
 import initialGameResources.ClientDataResources;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -12,12 +13,22 @@ public class ClientGenerator {
 
     private final static double minCash = 15000.0;
     private final static double maxCash = 150000.0;
+    private final static double startingClientsNumber = 20;
     private final static int percentageClientsPreferringPassengerCars = 70;
     private final static int percentageClientsAcceptingDamagedCars = 20;
     private final static int percentageClientsAcceptingDamagedSuspension = 40;
 
+    public static ArrayList<Client> getClientsStartList() {
+        ArrayList<Client> startList = new ArrayList<>();
+        int i = 1;
+        while (i <= startingClientsNumber) {
+            startList.add(generateClient());
+            i++;
+        }
+        return startList;
+    }
 
-    public Client generateClient() {
+    public static Client generateClient() {
         return new Client(getRandomFirstName(), getRandomLastName(), getRandomCash(), getPreferredCarProducers(), getPreferredCarType(), getRandomAgreementToDamagedCar(), getRandomAgreementToDamagedSuspension());
     }
 
@@ -43,7 +54,7 @@ public class ClientGenerator {
     }
 
 
-    private String getPreferredCarType() {
+    private static String getPreferredCarType() {
         int rnd = ThreadLocalRandom.current().nextInt(10);
         if (rnd < percentageClientsPreferringPassengerCars / 10)
             return "PassengerCar";
@@ -51,11 +62,11 @@ public class ClientGenerator {
             return "TruckCar";
     }
 
-    private boolean getRandomAgreementToDamagedCar() {
+    private static boolean getRandomAgreementToDamagedCar() {
         return ThreadLocalRandom.current().nextInt(10) < percentageClientsAcceptingDamagedCars / 10;
     }
 
-    private boolean getRandomAgreementToDamagedSuspension() {
+    private static boolean getRandomAgreementToDamagedSuspension() {
         return ThreadLocalRandom.current().nextInt(10) < percentageClientsAcceptingDamagedSuspension / 10;
     }
 

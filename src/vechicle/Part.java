@@ -17,9 +17,9 @@ public class Part {
     public String toString(){
         String call;
         if(isBroke)
-            call = "is broken";
+            call = " broken";
         else
-        call = "works correctly";
+        call = "ok";
         return name+" "+ call;
     }
 }

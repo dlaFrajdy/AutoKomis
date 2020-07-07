@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="76cf92a0-f484-45a4-a5ea-262d89f86378" name="Default Changelist" comment="" />
+    <list default="true" id="76cf92a0-f484-45a4-a5ea-262d89f86378" name="Default Changelist" comment="ClientGenerator done">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/console/ChooseMultiplayerWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/console/GameWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/console/PlayGameWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/console/StartWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/console/ValidationMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/dataGenerator/ClientGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/dataGenerator/ClientGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/initialGameResources/CarResources.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/initialGameResources/CarResources.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataGenerator/ClientGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataGenerator/ClientGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/human/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/human/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vechicle/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vechicle/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vechicle/Part.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vechicle/Part.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +59,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaWSB" />
   </component>
   <component name="RunManager">
@@ -54,13 +90,52 @@
       <option name="presentableId" value="Default" />
       <updated>1593731757955</updated>
     </task>
+    <task id="LOCAL-00001" summary="CarGenerator, &#10;PartGenerator">
+      <created>1593956884254</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593956884254</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ClientGenerator done">
+      <created>1593984359677</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593984359677</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="CarGenerator, &#10;PartGenerator" />
+    <MESSAGE value="ClientGenerator done" />
+    <option name="LAST_COMMIT_MESSAGE" value="ClientGenerator done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="407" y="50" key="#Auto_Import" timestamp="1593943126439">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="407" y="50" key="#Auto_Import/0.0.1280.689@0.0.1280.689" timestamp="1593943126439" />
+    <state x="267" y="24" key="#Inspections" timestamp="1593984242359">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="267" y="24" key="#Inspections/0.0.1280.689@0.0.1280.689" timestamp="1593984242359" />
+    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1593970429365">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1593970429365" />
     <state x="424" y="240" width="432" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593818385423">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -69,29 +144,41 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1593956301675" />
-    <state width="1237" height="169" key="GridCell.Tab.0.bottom" timestamp="1593955593413">
+    <state width="1237" height="412" key="GridCell.Tab.0.bottom" timestamp="1594154209529">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="169" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1593955593413" />
-    <state width="1237" height="169" key="GridCell.Tab.0.center" timestamp="1593955593413">
+    <state width="1237" height="412" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1594154209529" />
+    <state width="1237" height="412" key="GridCell.Tab.0.center" timestamp="1594154209529">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="169" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1593955593413" />
-    <state width="1237" height="169" key="GridCell.Tab.0.left" timestamp="1593955593413">
+    <state width="1237" height="412" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1594154209529" />
+    <state width="1237" height="412" key="GridCell.Tab.0.left" timestamp="1594154209529">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="169" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1593955593413" />
-    <state width="1237" height="169" key="GridCell.Tab.0.right" timestamp="1593955593413">
+    <state width="1237" height="412" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1594154209529" />
+    <state width="1237" height="412" key="GridCell.Tab.0.right" timestamp="1594154209529">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="169" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1593955593413" />
+    <state width="1237" height="412" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1594154209529" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1593984365880">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1593984365880" />
+    <state x="440" y="5" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1594049248120">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="440" y="5" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.689@0.0.1280.689" timestamp="1594049248120" />
     <state x="443" y="252" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1593956195722">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="443" y="252" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.689@0.0.1280.689" timestamp="1593956195722" />
-    <state x="554" y="157" key="run.anything.popup" timestamp="1593943742681">
+    <state x="554" y="157" key="run.anything.popup" timestamp="1593989868673">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="554" y="157" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1593943742681" />
+    <state x="554" y="157" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1593989868673" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1593968894740">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1593968894740" />
   </component>
 </project>
