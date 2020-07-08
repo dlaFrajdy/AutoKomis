@@ -1,9 +1,13 @@
 package vechicle;
 
 import dataGenerator.PartGenerator;
+import human.Mechanic;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+
+import static java.util.concurrent.ThreadLocalRandom.current;
 
 public class Car {
 
@@ -36,6 +40,18 @@ public class Car {
         }
         return brokenPartsList;
     }
+
+    public ArrayList<Part> getWorkingPartsList(){
+        ArrayList<Part> workingPartsList = new ArrayList<>();
+        for (Part part:partList
+        ) {
+            if (!part.isBroke)
+                workingPartsList.add(part);
+        }
+        return workingPartsList;
+    }
+
+
 
     @Override
     public String toString() {

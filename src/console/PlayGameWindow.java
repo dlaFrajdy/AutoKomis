@@ -2,7 +2,10 @@ package console;
 
 import com.company.Game;
 import dataGenerator.CarGenerator;
+import human.Client;
+import human.Mechanic;
 import human.Player;
+import initialGameResources.MechanicsResources;
 import vechicle.Car;
 import vechicle.Part;
 
@@ -20,7 +23,7 @@ public class PlayGameWindow {
                 System.out.println("2. Buy a car");
                 System.out.println("3. Browse your cars");
                 System.out.println("4. Repair the car.");
-                System.out.println("5. Review potential customers");
+                System.out.println("5. Browse potential clients");
                 System.out.println("6. Sell a car");
                 System.out.println("7. Buy an ad");
                 System.out.println("8. Check account balance");
@@ -87,9 +90,26 @@ public class PlayGameWindow {
                         else {
 
                             Car carToRepair = player.getCarWithBrokenParts().get(choiceCar - 1);
+
                             System.out.println("Which parts do you want to repair?");
+
                             printBrokenParts(carToRepair);
+                            int partChoice = ValidationMethods.getValidatedIntAnswer();
+                            Part partToRepair = carToRepair.getBrokenPartsList().get(partChoice-1);
+
+                            System.out.println("Which mechanic do you choose?");
+                            printMechanicsList();
+                            int mechanicChoice = ValidationMethods.getValidatedIntAnswer();
+                            Mechanic mechanicToRepair = MechanicsResources.availableMechanics.get(mechanicChoice-1);
+                            player.repairCar(carToRepair,partToRepair,mechanicToRepair);
+                            playRound(game);
                         }
+                    }
+                    case 5 -> {
+                        printClientsList(game);
+                        choiceCar = ValidationMethods.getValidatedIntAnswer();
+                        if (choiceCar == 0)
+                            playRound(game);
                     }
                     default -> System.out.println("Wrong choice! Choose a number from the list again!");
                 }
@@ -133,6 +153,32 @@ public class PlayGameWindow {
         ) {
             if (part.isBroke)
                 System.out.println(index + 1 + ". " + part);
+            index++;
+        }
+
+    }
+
+    private static void printMechanicsList() {
+        int index = 0;
+
+        System.out.println("List of broken parts:");
+        for (Mechanic mechanic : MechanicsResources.availableMechanics
+        ) {
+
+                System.out.println(index + 1 + ". " + mechanic);
+            index++;
+        }
+
+    }
+
+    private static void printClientsList(Game game) {
+        int index = 0;
+
+        System.out.println("List of potential clients: [type 0 to go back]");
+        for (Client client : game.potencialClients
+        ) {
+
+            System.out.println(index + 1 + ". " + client);
             index++;
         }
 
