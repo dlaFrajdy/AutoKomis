@@ -19,18 +19,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76cf92a0-f484-45a4-a5ea-262d89f86378" name="Default Changelist" comment="MainWindow case#4">
-      <change afterPath="$PROJECT_DIR$/src/initialGameResources/MechanicsResources.java" afterDir="false" />
+    <list default="true" id="76cf92a0-f484-45a4-a5ea-262d89f86378" name="Default Changelist" comment="RepairCar done.">
+      <change afterPath="$PROJECT_DIR$/src/transaction/PurchaseTransaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transaction/SaleTransaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transaction/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/human/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/human/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/human/Mechanic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/human/Mechanic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/human/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/human/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/human/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/human/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/vechicle/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/vechicle/Car.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/vechicle/Part.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/vechicle/Part.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/console/GameWindow.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/console/PlayGameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/console/PlayGameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/human/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/human/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/human/Mechanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/human/Mechanic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/human/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/human/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/human/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/human/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vechicle/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vechicle/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vechicle/Part.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vechicle/Part.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594158347965</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="RepairCar done.">
+      <created>1594167796956</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594167796956</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,12 +135,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="CarGenerator, &#10;PartGenerator" />
     <MESSAGE value="ClientGenerator done" />
     <MESSAGE value="MainWindow case#4" />
-    <option name="LAST_COMMIT_MESSAGE" value="MainWindow case#4" />
+    <MESSAGE value="RepairCar done." />
+    <option name="LAST_COMMIT_MESSAGE" value="RepairCar done." />
   </component>
   <component name="WindowStateProjectService">
     <state x="407" y="50" key="#Auto_Import" timestamp="1593943126439">
@@ -135,46 +153,50 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="267" y="24" key="#Inspections/0.0.1280.689@0.0.1280.689" timestamp="1593984242359" />
-    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1594160625296">
+    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser" timestamp="1594243925787">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1594160625296" />
+    <state x="446" y="61" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1594243925787" />
     <state x="424" y="240" width="432" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593818385423">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="424" y="240" width="432" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.689@0.0.1280.689" timestamp="1593818385423" />
-    <state x="370" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1594163377175">
+    <state x="85" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1594243804452">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="370" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.689@0.0.1280.689" timestamp="1594163377175" />
+    <state x="85" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.689@0.0.1280.689" timestamp="1594243804452" />
     <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1593956301675">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1593956301675" />
-    <state width="1237" height="54" key="GridCell.Tab.0.bottom" timestamp="1594166927894">
+    <state width="1237" height="38" key="GridCell.Tab.0.bottom" timestamp="1594256475889">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="54" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1594166927894" />
-    <state width="1237" height="54" key="GridCell.Tab.0.center" timestamp="1594166927894">
+    <state width="1237" height="38" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1594256475889" />
+    <state width="1237" height="38" key="GridCell.Tab.0.center" timestamp="1594256475888">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="54" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1594166927894" />
-    <state width="1237" height="54" key="GridCell.Tab.0.left" timestamp="1594166927894">
+    <state width="1237" height="38" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1594256475888" />
+    <state width="1237" height="38" key="GridCell.Tab.0.left" timestamp="1594256475888">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="54" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1594166927894" />
-    <state width="1237" height="54" key="GridCell.Tab.0.right" timestamp="1594166927894">
+    <state width="1237" height="38" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1594256475888" />
+    <state width="1237" height="38" key="GridCell.Tab.0.right" timestamp="1594256475889">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="54" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1594166927894" />
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1594158350354">
+    <state width="1237" height="38" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1594256475889" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1594167799612">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1594158350354" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1594167799612" />
     <state x="440" y="5" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1594049248120">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="440" y="5" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.689@0.0.1280.689" timestamp="1594049248120" />
+    <state x="737" y="83" key="extract.method.dialog" timestamp="1594246863481">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="737" y="83" key="extract.method.dialog/0.0.1280.689@0.0.1280.689" timestamp="1594246863481" />
     <state x="443" y="252" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1593956195722">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

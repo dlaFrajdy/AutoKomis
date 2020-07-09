@@ -3,7 +3,7 @@ package vechicle;
 public class Part {
     public String name;
     public double materialsCost;
-    private double increaseCarValueRate;
+    public double increaseCarValueRate;
     public boolean isBroke;
 
     public Part(String name, double materialsCost, double increaseCarValueRate, boolean isBroke) {

@@ -1,6 +1,5 @@
 package com.company;
 
-import console.StartWindow;
 import dataGenerator.CarGenerator;
 import dataGenerator.ClientGenerator;
 import human.Client;
@@ -12,14 +11,14 @@ import java.util.ArrayList;
 public class Game {
     public ArrayList<Player> playerList;
     public ArrayList<Car> carsAvailableForPurchase;
-    public ArrayList<Client> potencialClients;
+    public static ArrayList<Client> potenctalClients;
     public int currentRound;
     public Player winner;
 
     public Game(ArrayList<String> playerNamesList){
         playerList = new ArrayList<>();
         carsAvailableForPurchase = CarGenerator.getCarStartList();
-        potencialClients = ClientGenerator.getClientsStartList();
+        potenctalClients = ClientGenerator.getClientsStartList();
         currentRound = 0;
 
         for (String playerName: playerNamesList
@@ -31,7 +30,7 @@ public class Game {
 
     public void increaseNumberOfPotencialClients(int number){
         for (int i=0; i<number;i++){
-            potencialClients.add(ClientGenerator.generateClient());
+            potenctalClients.add(ClientGenerator.generateClient());
         }
     }
 }

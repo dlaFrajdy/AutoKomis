@@ -1,6 +1,8 @@
 package vechicle;
 
+import com.company.Game;
 import dataGenerator.PartGenerator;
+import human.Client;
 import human.Mechanic;
 
 import java.util.ArrayList;
@@ -20,7 +22,6 @@ public class Car {
     private ArrayList<Part> partList;
 
 
-
     public Car(String producer, String model, String color, double value, int mileage) {
         this.producer = producer;
         this.model = model;
@@ -31,9 +32,9 @@ public class Car {
 
     }
 
-    public ArrayList<Part> getBrokenPartsList(){
+    public ArrayList<Part> getBrokenPartsList() {
         ArrayList<Part> brokenPartsList = new ArrayList<>();
-        for (Part part:partList
+        for (Part part : partList
         ) {
             if (part.isBroke)
                 brokenPartsList.add(part);
@@ -41,21 +42,42 @@ public class Car {
         return brokenPartsList;
     }
 
-    public ArrayList<Part> getWorkingPartsList(){
+    public ArrayList<Part> getWorkingPartsList() {
         ArrayList<Part> workingPartsList = new ArrayList<>();
-        for (Part part:partList
+        for (Part part : partList
         ) {
             if (!part.isBroke)
                 workingPartsList.add(part);
         }
         return workingPartsList;
     }
+/*
+    public ArrayList<Client> getListOfClientsInterestedInThisCar(Car car) {
+        ArrayList<Client> interestedClients = new ArrayList<>();
+        for (Client client : Game.potenctalClients
+        ) {
 
 
+            if (client.preferredCarProducers.contains(car.producer) &&
+                    client.preferredCarType == car.getClass().toString() &&
+                    !isContainBrokenPart("brakes") &&
+                    !isContainBrokenPart("engine") &&
+                    !isContainBrokenPart("gearbox")) {
+
+
+            }
+
+        }
+        return interestedClients;
+    }
+*/
+    private boolean isContainBrokenPart(String nameArg) {
+        return getBrokenPartsList().stream().filter(o -> o.name.equals(nameArg)).findFirst().isPresent();
+    }
 
     @Override
     public String toString() {
-        return producer + " " + model + " " + color + " " + value + "zł " + mileage + "km"+partList;
+        return producer + " " + model + " " + color + " " + value + "zł " + mileage + "km" + partList;
     }
 
 }
