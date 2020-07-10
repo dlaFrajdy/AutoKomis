@@ -8,7 +8,8 @@ import java.util.Scanner;
 
 public class StartWindow {
     public static Game printMainMenu() {
-        System.out.println("   #    #     # ####### #######             #    # ####### #     # ###  #####  \n" +
+        System.out.println(
+                "   #    #     # ####### #######             #    # ####### #     # ###  #####  \n" +
                 "  # #   #     #    #    #     #             #   #  #     # ##   ##  #  #     # \n" +
                 " #   #  #     #    #    #     #             #  #   #     # # # # #  #  #       \n" +
                 "#     # #     #    #    #     #    #####    ###    #     # #  #  #  #   #####  \n" +
@@ -17,8 +18,8 @@ public class StartWindow {
                 "#     #  #####     #    #######             #    # ####### #     # ###  #####  ");
         System.out.println("\n\t\t\t\t\t\t\t1. Single player.");
         System.out.println("\t\t\t\t\t\t\t2. Multi player");
-        System.out.println("\t\t\t\t\t\t\t0. Settings");
-        System.out.println("\n\t\t\t\t\tPress choice button and confirm..");
+        // System.out.println("\t\t\t\t\t\t\t0. Settings"); w budowie :)
+        System.out.println("\n\t\t\t\t\tWrite choice number and confirm..");
 
         int choice;
         while(true){
@@ -35,12 +36,10 @@ public class StartWindow {
         switch (choice) {
             case 1 -> game = new Game(getPlayersName(1));
             case 2 -> game = new Game(getPlayersName(getNumberOfPlayers()));
-            case 0 -> System.out.println("Wyświetla ustawienia");
+            //case 0 ->
             default -> System.out.println("Wrong choice! Choose a number from the list again!");
         }
         return game;
-
-
     }
 
 

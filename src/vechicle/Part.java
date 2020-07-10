@@ -14,12 +14,12 @@ public class Part {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         String call;
-        if(isBroke)
+        if (isBroke)
             call = " broken";
         else
-        call = "ok";
-        return name+" "+ call;
+            call = "ok";
+        return name + " " + call;
     }
 }

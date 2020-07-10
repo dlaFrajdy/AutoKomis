@@ -1,6 +1,8 @@
 package human;
 
-import java.security.PrivateKey;
+import vechicle.Car;
+
+
 import java.util.List;
 
 public class Client extends Person{
@@ -25,12 +27,17 @@ public class Client extends Person{
         this.isAcceptDamagedSuspension = isAcceptDamagedSuspension;
     }
 
-    public double getCash(){
-        return cash;
+
+    public boolean checkIfAcceptCar(Car car){
+        if (!car.getClass().toString().contains(this.preferredCarType)) return false;
+        if (this.preferredCarProducers.contains(car.producer)) return false;
+        if(car.getBrokenPartsList().stream().anyMatch(o -> o.name.equals("suspension")) && !this.isAcceptDamagedSuspension) return false;
+        return car.getBrokenPartsList().stream().filter(o -> o.name.equals("carBody")).findFirst().isEmpty() || this.isAcceptDamagedVehicles;
     }
+
     @Override
     public String toString() {
-        return firstName + " " + lastName + " " + cash + " " + preferredCarProducers + " " + preferredCarType + " " + isAcceptDamagedVehicles + " " + isAcceptDamagedSuspension;
+        return "Name: "+firstName + " " + lastName + ". Cash: " + cash + ". Preferred car producer: " + preferredCarProducers + ". Preferred car type" + preferredCarType + ". Accept damaged vehicles: " + isAcceptDamagedVehicles + ". Accept damaged suspension: " + isAcceptDamagedSuspension;
     }
 
 

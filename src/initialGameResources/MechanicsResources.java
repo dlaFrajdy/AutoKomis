@@ -34,9 +34,9 @@ public class MechanicsResources {
         }
     }
 
-    public static ArrayList<Mechanic> availableMechanics = new ArrayList<>(){{
-        add(new Mechanic("Janusz", 100, 0,0));
-        add(new Mechanic("Marian", 60, 10,0));
-        add(new Mechanic("Adrian", 30, 20,2));
+    public static ArrayList<Mechanic> availableMechanics = new ArrayList<>() {{
+        add(new Mechanic("Janusz", 100, 0, 0));
+        add(new Mechanic("Marian", 60, 10, 0));
+        add(new Mechanic("Adrian", 30, 20, 2));
     }};
 }

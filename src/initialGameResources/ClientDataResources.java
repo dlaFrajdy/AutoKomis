@@ -1,10 +1,5 @@
 package initialGameResources;
 
-import java.util.HashSet;
-import java.util.List;
-
-import static initialGameResources.CarResources.carDatabase;
-
 public class ClientDataResources {
     public static String[] firstNames = {"James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Thomas", "Charles",
             "Christopher", "Daniel", "Matthew", "Anthony", "Donald", "Mark", "Paul", "Steven", "Kenneth", "Joshua", "Kevin", "Edward",

@@ -1,30 +1,34 @@
 package console;
 
 import com.company.Game;
+import com.company.Settings;
 import dataGenerator.CarGenerator;
+import human.Client;
 import human.Player;
 import initialGameResources.MechanicsResources;
 import vechicle.Car;
+import vechicle.Repair;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class PlayGameWindow {
     public static void playRound(Game game) {
 
-
         while (game.winner == null) {
-            for (Player player : game.playerList
-            ) {
+            for (Player player : game.playerList) {
+
                 int selectedMenuAction;
                 int internalActionChoice;
+
+
                 printSeparator();
                 printMainMenu(player);
 
                 while (true) {
                     selectedMenuAction = ValidationMethods.getValidatedIntAnswer();
 
-                    if (selectedMenuAction == 1 || selectedMenuAction == 2 || selectedMenuAction == 3 || selectedMenuAction == 4 || selectedMenuAction == 5 || selectedMenuAction == 6 ||
-                            selectedMenuAction == 7 || selectedMenuAction == 8 || selectedMenuAction == 9 || selectedMenuAction == 10 || selectedMenuAction == 11)
+                    if (selectedMenuAction > 0 && selectedMenuAction <= 11)
                         break;
                     else
                         System.out.println("Wrong choice! Choose a number from the list again!");
@@ -40,8 +44,12 @@ public class PlayGameWindow {
 
                         internalActionChoice = ValidationMethods.getValidatedIntAnswer();
 
-                        if (internalActionChoice == 0)
+                        if (internalActionChoice != 0) {
+                            System.out.println("Enter 0 to return to the menu!");
+                            internalActionChoice = ValidationMethods.getValidatedIntAnswer();
+                        } else
                             playRound(game);
+
                     }
 
                     case 2 -> {
@@ -57,13 +65,21 @@ public class PlayGameWindow {
 
                             if (internalActionChoice > game.carsAvailableForPurchase.size())
                                 System.out.println("Wrong choice! Choose a number from the list again!");
+
                             else {
                                 Car playerNewCar = game.carsAvailableForPurchase.get(internalActionChoice - 1);
-                                player.buyCar(playerNewCar);
-                                game.carsAvailableForPurchase.remove(playerNewCar);
-                                game.carsAvailableForPurchase.add(CarGenerator.getRandomCar());
-                                game.currentRound++;
-                                break;
+                                if (!player.checkIfCanAffordCar(playerNewCar)) {
+                                    System.out.println("Sorry, you don't have enough money! Come back when you check how much money you have..");
+                                    if (internalActionChoice != 0) {
+                                        System.out.println("Enter 0 to return to the menu!");
+
+                                    }
+                                } else {
+                                    player.buyCar(playerNewCar);
+                                    game.carsAvailableForPurchase.remove(playerNewCar);
+                                    game.carsAvailableForPurchase.add(CarGenerator.getRandomCar());
+                                    break;
+                                }
                             }
                         }
                     }
@@ -71,12 +87,15 @@ public class PlayGameWindow {
                     case 3 -> {
                         printSeparator();
                         System.out.println("List of owned vehicles: [type 0 to go back]\n");
-                        System.out.println(player.getOwnedCars());
+                        printListAsNumbered(player.getOwnedCars());
 
                         internalActionChoice = ValidationMethods.getValidatedIntAnswer();
 
-                        if (internalActionChoice == 0)
-                            playRound(game);
+                        if (internalActionChoice != 0) {
+                            System.out.println("Enter 0 to return to the menu!");
+                            internalActionChoice = ValidationMethods.getValidatedIntAnswer();
+                        }
+                        playRound(game);
                     }
 
                     case 4 -> {
@@ -123,6 +142,7 @@ public class PlayGameWindow {
                         player.repairCar(carToRepair,
                                 carToRepair.getBrokenPartsList().get(partChoice - 1),
                                 MechanicsResources.availableMechanics.get(mechanicChoice - 1));
+                        break;
 
                     }
 
@@ -145,13 +165,24 @@ public class PlayGameWindow {
                         Car carToSell = player.getOwnedCars().get(internalActionChoice - 1);
 
                         System.out.println("Select a person from the list of people interested in buying this car:  [type 0 to go back]");
-                        //
-                        //
-                        //  DOKONCZYC
-                        //
-                        //
-                        ////player.sellCar(carToSell, );
-                        playRound(game);
+                        printListAsNumbered(Game.potenctalClients);
+
+                        internalActionChoice = ValidationMethods.getValidatedIntAnswer();
+
+                        if (internalActionChoice == 0)
+                            playRound(game);
+
+                        Client potencialClient = Game.potenctalClients.get(internalActionChoice - 1);
+
+                        if (!potencialClient.checkIfAcceptCar(carToSell))
+                            System.out.println("Sorry, this customer does not accept the purchase of this car! Type 0 to back and check yours Cars and Clients details!");
+                        else {
+                            player.sellCar(carToSell, potencialClient);
+                        }
+                        if (internalActionChoice != 0) {
+                            System.out.println("Enter 0 to return to main menu!");
+                            internalActionChoice = ValidationMethods.getValidatedIntAnswer();
+                        }
                     }
 
                     case 7 -> {
@@ -165,15 +196,14 @@ public class PlayGameWindow {
                             internalActionChoice = ValidationMethods.getValidatedIntAnswer();
                             if (internalActionChoice == 0)
                                 playRound(game);
-                            if (internalActionChoice == 1){
+                            if (internalActionChoice == 1) {
                                 player.buyNewspaperAd(game);
                                 break;
                             }
-                            if (internalActionChoice == 2){
+                            if (internalActionChoice == 2) {
                                 player.buyInternetAd(game);
                                 break;
-                            }
-                            else
+                            } else
                                 System.out.println("Wrong choice! Choose a number from the list again!");
                         }
 
@@ -197,23 +227,52 @@ public class PlayGameWindow {
                             playRound(game);
                     }
 
-                    case 10 -> printSeparator();
+                    case 10 -> {
+                        printSeparator();
+                        int index = 1;
+                        if (player.getOwnedCars().isEmpty())
+                            System.out.println("You don't have any cars, so you didn't fix anything. [type 0 to go back]");
+
+                        for (Car car : player.getOwnedCars()
+                        ) {
+                            System.out.println(index + ". " + car + " repair history: [type 0 to go back]");
+                            if (car.getRepairHistory().isEmpty())
+                                System.out.println("\tThis car has not been repaired");
+                            else
+                                for (Repair repair : car.getRepairHistory()
+                                ) {
+                                    System.out.println("\t" + repair);
+                                }
+                        }
+
+
+                        internalActionChoice = ValidationMethods.getValidatedIntAnswer();
+                        if (internalActionChoice == 0)
+                            playRound(game);
+                    }
+                    case 11 -> {
+                        printSeparator();
+                        System.out.println("Sum of repair and washing costs: [type 0 to go back]");
+                        System.out.println(player.getSumOfRepairAndWashingCosts());
+                        internalActionChoice = ValidationMethods.getValidatedIntAnswer();
+                        if (internalActionChoice == 0)
+                            playRound(game);
+                        System.out.println(player.getSumOfRepairAndWashingCosts());
+                    }
                     default -> System.out.println("Wrong choice! Choose a number from the list again!");
                 }
-
+                if (player.getCash() >= Settings.defaultPlayerCashAmount) {
+                    System.out.println("CONGRATULATIONS " + player.firstName.toUpperCase() + " ! YOU WIN IN " + game.currentRound + "round !!!");
+                    game.winner = player;
+                }
+                game.currentRound++;
             }
-            game.currentRound++;
         }
-
     }
 
-
-    private void printClientsInterestedInCar(Car car) {
-
-    }
 
     private static void printMainMenu(Player player) {
-        System.out.println("\t\t----- Player: " + player.firstName.toUpperCase() + " || cash: " + player.getCash() + " || No. of cars: " + player.getOwnedCars().size() + " -----\n");
+        System.out.println("\t\t----- Player: " + player.firstName.toUpperCase() + " || cash: " + player.getCash() + " || No. of cars: " + player.getOwnedCars().size() + "-----\n");
         System.out.println("1. Browse the list of cars available for purchase");
         System.out.println("2. Buy a car");
         System.out.println("3. Browse your cars");
@@ -237,6 +296,17 @@ public class PlayGameWindow {
     }
 
     private static void printSeparator() {
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     }
+/*
+    private static void backIfType0(Game game){
+        int internalActionChoice = ValidationMethods.getValidatedIntAnswer();
+
+        if (internalActionChoice != 0) {
+            System.out.println("Enter 0 to return to the menu!");
+            internalActionChoice = ValidationMethods.getValidatedIntAnswer();
+        }
+    }
+    
+ */
 }

@@ -13,4 +13,9 @@ public class PassengerCar extends Car {
         super(producer, model, color, value, mileage);
         this.classification = classification;
     }
+
+    @Override
+    public String toString() {
+        return producer + " " + model + " " + color + " " + value + "zł " + mileage + "km" + partList + "car classification: " + classification.toString();
+    }
 }

@@ -1,6 +1,6 @@
 package human;
 
-public class Mechanic extends Person{
+public class Mechanic extends Person {
     public final int repairPriceRate;    // % on the price of the part
     public final int chanceForFailedRepair; // %
     public final int chanceToDestroyAnotherPart; // %
@@ -13,7 +13,7 @@ public class Mechanic extends Person{
     }
 
     @Override
-    public String toString(){
-        return firstName +". Repair price rate: "+ repairPriceRate +"%. Chance for failed repair: "+chanceForFailedRepair+"%. Chance to destroy another part: "+chanceToDestroyAnotherPart+"%.";
+    public String toString() {
+        return firstName + ". Repair price rate: " + repairPriceRate + "%. Chance for failed repair: " + chanceForFailedRepair + "%. Chance to destroy another part: " + chanceToDestroyAnotherPart + "%.";
     }
 }

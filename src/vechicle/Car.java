@@ -1,15 +1,9 @@
 package vechicle;
 
-import com.company.Game;
 import dataGenerator.PartGenerator;
-import human.Client;
-import human.Mechanic;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 
-import static java.util.concurrent.ThreadLocalRandom.current;
 
 public class Car {
 
@@ -19,7 +13,8 @@ public class Car {
     public String color;
     public double value;
     public int mileage;
-    private ArrayList<Part> partList;
+    public ArrayList<Part> partList;
+    private ArrayList<Repair> repairHistory;
 
 
     public Car(String producer, String model, String color, double value, int mileage) {
@@ -29,7 +24,11 @@ public class Car {
         this.value = value;
         this.mileage = mileage;
         this.partList = PartGenerator.generatePartSet(this);
+        this.repairHistory = new ArrayList<>();
+    }
 
+    public void addRepairToHistory(Repair repair) {
+        this.repairHistory.add(repair);
     }
 
     public ArrayList<Part> getBrokenPartsList() {
@@ -51,33 +50,13 @@ public class Car {
         }
         return workingPartsList;
     }
-/*
-    public ArrayList<Client> getListOfClientsInterestedInThisCar(Car car) {
-        ArrayList<Client> interestedClients = new ArrayList<>();
-        for (Client client : Game.potenctalClients
-        ) {
-
-
-            if (client.preferredCarProducers.contains(car.producer) &&
-                    client.preferredCarType == car.getClass().toString() &&
-                    !isContainBrokenPart("brakes") &&
-                    !isContainBrokenPart("engine") &&
-                    !isContainBrokenPart("gearbox")) {
-
-
-            }
-
-        }
-        return interestedClients;
-    }
-*/
-    private boolean isContainBrokenPart(String nameArg) {
-        return getBrokenPartsList().stream().filter(o -> o.name.equals(nameArg)).findFirst().isPresent();
-    }
 
     @Override
     public String toString() {
         return producer + " " + model + " " + color + " " + value + "zł " + mileage + "km" + partList;
     }
 
+    public ArrayList<Repair> getRepairHistory() {
+        return repairHistory;
+    }
 }

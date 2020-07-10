@@ -3,7 +3,7 @@ package transaction;
 import human.Client;
 import vechicle.Car;
 
-public class SaleTransaction extends Transaction{
+public class SaleTransaction extends Transaction {
     private Client client;
 
 
@@ -14,7 +14,7 @@ public class SaleTransaction extends Transaction{
     }
 
     @Override
-    public String toString(){
-        return "Sale transaction. Seller: "+client.firstName + " " + client.lastName+". Price: "+ price+" . Car: "+car;
+    public String toString() {
+        return "Sale transaction. Seller: " + client.firstName + " " + client.lastName + ". Price: " + price + " . Car: " + car;
     }
 }
