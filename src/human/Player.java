@@ -102,7 +102,7 @@ public class Player extends Person {
             else{
                 part.isBroke = false;
                 this.cash -= repairCost;
-                car.value *= 1 + part.increaseCarValueRate;
+                car.value *= 1 + part.increaseCarValueRate/100.0;
 
                 System.out.println("Part repaired. The cost of the service is " + repairCost + ".");
             }
@@ -122,7 +122,7 @@ public class Player extends Person {
                     part.isBroke = false;
                     System.out.println("Part repaired. The cost of the service is " + repairCost + ".");
                     this.cash -= repairCost;
-                    car.value *= 1 + part.increaseCarValueRate;
+                    car.value *= 1 + part.increaseCarValueRate/100.0;
                 }
             }
 
@@ -143,7 +143,7 @@ public class Player extends Person {
                     repairCost = part.materialsCost * mechanic.repairPriceRate / 100.0;
                     part.isBroke = false;
                     this.cash -= repairCost;
-                    car.value *= 1 + part.increaseCarValueRate;
+                    car.value *= 1 + part.increaseCarValueRate/100.0;
                     System.out.println("Part repaired. The cost of the service is " + repairCost + ".");
                 }
 

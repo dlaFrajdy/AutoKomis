@@ -20,31 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76cf92a0-f484-45a4-a5ea-262d89f86378" name="Default Changelist" comment="before sending work on moodle">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Settings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vechicle/Repair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/human/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/human/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/human/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/human/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/initialGameResources/ClientDataResources.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/initialGameResources/ClientDataResources.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/vechicle/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/vechicle/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/vechicle/PassengerCar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/vechicle/PassengerCar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AutoKomis/vechicle/TruckCar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AutoKomis/vechicle/TruckCar.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/console/ChooseMultiplayerWindow.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/console/PlayGameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/console/PlayGameWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/console/StartWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/console/StartWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/human/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/human/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/human/Mechanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/human/Mechanic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/human/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/human/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/initialGameResources/ClientDataResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/initialGameResources/ClientDataResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/initialGameResources/MechanicsResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/initialGameResources/MechanicsResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transaction/PurchaseTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transaction/PurchaseTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transaction/SaleTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transaction/SaleTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vechicle/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vechicle/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vechicle/Part.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vechicle/Part.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vechicle/PassengerCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vechicle/PassengerCar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vechicle/TruckCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vechicle/TruckCar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594256741994</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="before sending work on moodle">
+      <created>1594409036575</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1594409036575</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,30 +170,30 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="85" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.689@0.0.1280.689" timestamp="1594243804452" />
-    <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1593956301675">
+    <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1594413433829">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1593956301675" />
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1594408807606">
+    <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1594413433829" />
+    <state width="1237" height="84" key="GridCell.Tab.0.bottom" timestamp="1594413137662">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1594408807606" />
-    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1594408807606">
+    <state width="1237" height="84" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1594413137662" />
+    <state width="1237" height="84" key="GridCell.Tab.0.center" timestamp="1594413137662">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1594408807606" />
-    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1594408807606">
+    <state width="1237" height="84" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1594413137662" />
+    <state width="1237" height="84" key="GridCell.Tab.0.left" timestamp="1594413137662">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1594408807606" />
-    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1594408807606">
+    <state width="1237" height="84" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1594413137662" />
+    <state width="1237" height="84" key="GridCell.Tab.0.right" timestamp="1594413137662">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1594408807606" />
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1594256744046">
+    <state width="1237" height="84" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1594413137662" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1594409038784">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1594256744046" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1594409038784" />
     <state x="440" y="5" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1594049248120">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

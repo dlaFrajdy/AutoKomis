@@ -2,8 +2,6 @@ package com.company;
 
 import console.PlayGameWindow;
 import console.StartWindow;
-import dataGenerator.CarGenerator;
-import vechicle.Car;
 
 public class Main {
 
@@ -15,7 +13,7 @@ public class Main {
 
 
 
-        Game game = StartWindow.printMainMenu();
+        Game game = StartWindow.printStartMenu();
         PlayGameWindow.playRound(game);
 
 

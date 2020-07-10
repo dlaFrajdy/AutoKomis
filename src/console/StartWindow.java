@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StartWindow {
-    public static Game printMainMenu() {
+    public static Game printStartMenu() {
         System.out.println(
                 "   #    #     # ####### #######             #    # ####### #     # ###  #####  \n" +
                 "  # #   #     #    #    #     #             #   #  #     # ##   ##  #  #     # \n" +

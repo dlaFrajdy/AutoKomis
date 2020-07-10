@@ -11,12 +11,14 @@ import vechicle.Repair;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PlayGameWindow {
     public static void playRound(Game game) {
 
         while (game.winner == null) {
             for (Player player : game.playerList) {
+
 
                 int selectedMenuAction;
                 int internalActionChoice;
@@ -42,13 +44,14 @@ public class PlayGameWindow {
                         System.out.println("List of available cars: [type 0 to go back]\n");
                         printListAsNumbered(game.carsAvailableForPurchase);
 
+                        System.out.println("Enter 0 to return to the menu!");
                         internalActionChoice = ValidationMethods.getValidatedIntAnswer();
 
-                        if (internalActionChoice != 0) {
+                        while (internalActionChoice != 0) {
                             System.out.println("Enter 0 to return to the menu!");
                             internalActionChoice = ValidationMethods.getValidatedIntAnswer();
-                        } else
-                            playRound(game);
+                        }
+                        playRound(game);
 
                     }
 
@@ -162,6 +165,8 @@ public class PlayGameWindow {
                         printListAsNumbered(player.getOwnedCars());
 
                         internalActionChoice = ValidationMethods.getValidatedIntAnswer();
+                        if (internalActionChoice == 0)
+                            playRound(game);
                         Car carToSell = player.getOwnedCars().get(internalActionChoice - 1);
 
                         System.out.println("Select a person from the list of people interested in buying this car:  [type 0 to go back]");
@@ -266,6 +271,16 @@ public class PlayGameWindow {
                     game.winner = player;
                 }
                 game.currentRound++;
+                if (game.playerList.size() > 1) {
+                    printSeparator();
+
+                    System.out.println("\t\t\t\t\t\tEnd of " + player.firstName + "'s move!");
+                    System.out.println("\t\t\t\t\t press any key and confirm..\n\n\n\n\n\n");
+                    Scanner x = new Scanner(System.in);
+
+                    x.nextLine();
+
+                }
             }
         }
     }
@@ -307,6 +322,6 @@ public class PlayGameWindow {
             internalActionChoice = ValidationMethods.getValidatedIntAnswer();
         }
     }
-    
+
  */
 }
